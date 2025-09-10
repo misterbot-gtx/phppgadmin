@@ -29,10 +29,6 @@ function env($key, $default = '') {
 }
 
 
-function envBool($key, $default = false) {
-    $value = strtolower(env($key, $default ? 'true' : 'false'));
-    return in_array($value, ['true', '1', 'yes', 'on'], true);
-}
 
 /**
  * phpPgAdmin central configuration
