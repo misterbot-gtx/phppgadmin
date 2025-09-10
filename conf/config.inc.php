@@ -1,10 +1,5 @@
 <?php
 
-// DEBUG: Verifique se PG_EXTRA_LOGIN_SECURITY foi lida corretamente
-error_log("DEBUG: extra_login_security = " . env('PG_EXTRA_LOGIN_SECURITY', 'NOT SET'));
-error_log("DEBUG: DIR_ROOT = " . DIR_ROOT);
-error_log("DEBUG: .env exists? " . (file_exists(DIR_ROOT . '/.env') ? 'YES' : 'NO'));
-
 define('DIR_ROOT', dirname(__DIR__, 1));
 
 $envFile = DIR_ROOT . '/.env';
@@ -55,7 +50,7 @@ $conf['servers'][0]['pg_dumpall_path'] = env('PG_DUMPALL_PATH', '/usr/bin/pg_dum
 // Configurações gerais
 $conf['default_lang']          = env('PG_DEFAULT_LANG', 'auto');
 $conf['autocomplete']          = 'default on';
-$conf['extra_login_security']  = envBool('PG_EXTRA_LOGIN_SECURITY', false);
+$conf['extra_login_security'] = false;
 $conf['owned_only']            = envBool('PG_OWNED_ONLY', false);
 $conf['show_comments']         = envBool('PG_SHOW_COMMENTS', true);
 $conf['show_advanced']         = envBool('PG_SHOW_ADVANCED', false);
