@@ -5,11 +5,11 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     unzip \
     wget \
-    && docker-php-ext-configure pgsql -with-pgsql=/usr \
+    && docker-php-ext-configure pgsql --with-pgsql=/usr/local/pgsql \
     && docker-php-ext-install pgsql pdo_pgsql \
     && rm -rf /var/lib/apt/lists/*
 
-# Baixa phpPgAdmin (versão compatível com PHP 7.2)
+# Baixa phpPgAdmin
 WORKDIR /var/www/html
 RUN wget https://github.com/phppgadmin/phppgadmin/archive/REL_7-13-0.tar.gz -O phppgadmin.tar.gz \
     && tar -xzf phppgadmin.tar.gz \
