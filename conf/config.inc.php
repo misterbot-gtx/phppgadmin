@@ -1,5 +1,9 @@
 <?php
 
+// DEBUG: Verifique se PG_EXTRA_LOGIN_SECURITY foi lida corretamente
+error_log("DEBUG: extra_login_security = " . env('PG_EXTRA_LOGIN_SECURITY', 'NOT SET'));
+error_log("DEBUG: DIR_ROOT = " . DIR_ROOT);
+error_log("DEBUG: .env exists? " . (file_exists(DIR_ROOT . '/.env') ? 'YES' : 'NO'));
 
 define('DIR_ROOT', dirname(__DIR__, 1));
 
