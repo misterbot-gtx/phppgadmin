@@ -50,11 +50,11 @@ $conf['servers'][0]['pg_dumpall_path'] = env('PG_DUMPALL_PATH', '/usr/bin/pg_dum
 // Configurações gerais
 $conf['default_lang']          = env('PG_DEFAULT_LANG', 'auto');
 $conf['autocomplete']          = 'default on';
-$conf['extra_login_security']  = env('PG_EXTRA_LOGIN_SECURITY', false);
-$conf['owned_only']            = env('PG_OWNED_ONLY', false);
-$conf['show_comments']         = env('PG_SHOW_COMMENTS', true);
-$conf['show_advanced']         = env('PG_SHOW_ADVANCED', false);
-$conf['show_system']           = env('PG_SHOW_SYSTEM', false);
+$conf['extra_login_security']  = env('PG_EXTRA_LOGIN_SECURITY', 'false');
+$conf['owned_only']            = env('PG_OWNED_ONLY', 'false');
+$conf['show_comments']         = env('PG_SHOW_COMMENTS', 'true');
+$conf['show_advanced']         = env('PG_SHOW_ADVANCED', 'false');
+$conf['show_system']           = env('PG_SHOW_SYSTEM', 'false');
 $conf['min_password_length']   = 1;
 $conf['left_width']            = 200;
 $conf['theme']                 = env('PG_THEME', 'default');
